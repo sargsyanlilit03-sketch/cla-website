@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "cla-website",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "3000"],
+      "runtimeExecutable": "/usr/bin/python3",
+      "runtimeArgs": ["-m", "http.server", "3000", "--directory", "/Users/lilitsargsyan/Desktop/cla-website"],
       "port": 3000
     }
   ]
