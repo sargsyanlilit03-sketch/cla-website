@@ -90,20 +90,35 @@
 
     .nav-cta {
       font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: 13px;
+      font-size: 10px;
       font-weight: 700;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--black);
       background: var(--gold);
-      padding: 10px 24px;
+      padding: 12px 24px;
       border: none;
       cursor: pointer;
-      transition: background 0.2s ease, transform 0.1s ease;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .nav-cta::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.18);
+      transform: translateX(-101%);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav-cta:hover::after {
+      transform: translateX(0);
     }
 
     .nav-cta:hover {
-      background: var(--gold-dim);
+      box-shadow: 0 4px 16px rgba(212, 175, 55, 0.2);
     }
 
     /* ── HAMBURGER ── */
@@ -233,25 +248,43 @@
     .btn-primary {
       display: inline-block;
       font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: 13px;
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.25em;
       text-transform: uppercase;
       color: var(--black);
       background: var(--gold);
-      padding: 20px 56px;
+      padding: 22px 64px;
       border: none;
       cursor: pointer;
-      transition: background 0.2s ease, transform 0.15s ease;
+      position: relative;
+      overflow: hidden;
+      transition: color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+    }
+
+    /* Sweep-in dark overlay on hover */
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.18);
+      transform: translateX(-101%);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .btn-primary:hover::after {
+      transform: translateX(0);
     }
 
     .btn-primary:hover {
-      background: var(--gold-dim);
       transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(212, 175, 55, 0.22);
     }
 
     .btn-primary:active {
       transform: translateY(0);
+      box-shadow: none;
     }
 
     .hero-divider {
