@@ -46,13 +46,14 @@
       left: 0;
       right: 0;
       z-index: 100;
-      padding: 20px 40px;
+      padding: 12px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       background: rgba(0,0,0,0.92);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--border);
+      min-height: 80px;
     }
 
     .nav-logo {
@@ -712,7 +713,8 @@
 
     @media (max-width: 640px) {
       nav {
-        padding: 16px 20px;
+        padding: 10px 20px;
+        min-height: 72px;
       }
 
       .nav-logo {
@@ -756,7 +758,7 @@
   <!-- NAV -->
   <nav id="home">
     <a href="#home" class="nav-logo">
-      <img src="logo.PNG" alt="Chess Logic Academy" style="height: 40px; width: auto; display: block;" />
+      <img src="logo.PNG" alt="Chess Logic Academy" style="height: 60px; width: auto; display: block;" />
     </a>
     <div class="nav-links">
       <a class="nav-link" href="#home">Home</a>
