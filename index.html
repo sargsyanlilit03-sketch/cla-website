@@ -205,14 +205,25 @@
       color: var(--gold);
     }
 
+    .hero-tagline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+      font-style: italic;
+      color: var(--gray);
+      max-width: 560px;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
     .hero-sub {
       font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: clamp(0.95rem, 2vw, 1.15rem);
+      font-size: clamp(0.85rem, 1.8vw, 1rem);
       color: var(--gray);
       max-width: 440px;
       margin-bottom: 52px;
       line-height: 1.8;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
     }
 
     .btn-primary {
@@ -257,7 +268,6 @@
       margin: 0 auto;
     }
 
-    /* ── SIGNATURE MARK — gold bar before every section label ── */
     .section-label {
       font-family: 'Helvetica Neue', Arial, sans-serif;
       font-size: 11px;
@@ -266,18 +276,6 @@
       text-transform: uppercase;
       color: var(--gold);
       margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .section-label::before {
-      content: '';
-      display: block;
-      width: 32px;
-      height: 2px;
-      background: var(--gold);
-      flex-shrink: 0;
     }
 
     .section-title {
@@ -809,7 +807,8 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-rule"></div>
-    <h1>Think sharper.<br>Decide better.<br><em>Chess is just the tool.</em></h1>
+    <h1>Chess Logic<br><em>Academy</em></h1>
+    <p class="hero-tagline">Think sharper. Decide better.<br>Chess is just the tool.</p>
     <p class="hero-sub">6 clear guides. From zero. Any age. 10 minutes a day.</p>
     <a class="btn-primary" href="https://chesslogicacademy.gumroad.com/l/vwllas" target="_blank" rel="noopener">Get the system</a>
     <div class="hero-divider"></div>
